@@ -1,0 +1,120 @@
+body {
+ background-color:#104F82;
+ color:#102B82;
+ font-family: "Google Sans", sans-serif;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    font-family: "Bitcount Ink", sans-serif;
+    font-size:30pt;
+}
+header  {
+    text-align: center;
+}
+
+/* The Hero */
+#hero, footer, #gallery {
+    text-align: center;
+    background-color: #1F826E;
+    color: #FFFFFF;
+    padding: 10px;
+    border: 3px solid #107382
+}
+#hero img {max-width: 100%;}
+
+/*Hobbies*/
+#Hobbies ul li:nth-child(even) {
+    background-color: #1F826E;
+    color: #FFFFFF;
+}
+#Hobbies {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+}
+
+#Hobbies h2 {
+    margin-bottom: 30px;
+}
+
+/*Gallery*/
+#gallery {
+    padding:0;
+}
+#gallery img {
+   max-width: 100%;
+}
+#gallery hr {
+    border:none;
+    border-top: 3px solid #107382
+}
+
+/*Articles*/
+#lit {
+    margin-bottom: 8rem;
+}
+#lit div {
+   padding: 2rem;
+   max-width: 700px;
+   margin: 0 auto;
+}
+#lit p::first-letter {
+    font-size: 275%;
+    font-weight: bold;
+    float:left;
+    border: 3px double #107382;
+    padding: 0 10px;
+    margin-right: 10px;
+    
+}
+
+#lit p {
+    clear:both;
+}
+#lit div {
+    max-width: 100%;
+    columns: 30rem;
+
+}
+
+/* Tablet and mobile styles */
+@media screen and  (width >= 960px) {
+
+    #gallery figure {
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        justify-itmes: center;
+    }
+
+}
+    #gallery figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+
+    /* Desktop Size */
+    @media screen and (width >= 1200px) {
+        
+        #gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-bottom: 50px;
+        }
+
+        #gallery h2 {
+            grid-column 1 / -1;
+        }
+
+        #gallery hr {
+            display:none
+        }
+        #gallery figure {
+            display:block;
+            
+        }
+    }
+
