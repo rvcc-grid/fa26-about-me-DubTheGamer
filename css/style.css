@@ -49,6 +49,16 @@ main {
 #hero img {width: min(100%, 12rem);}
 
 /* Hobbies */
+#Hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Hobbies h2 {
+    margin: 1rem 0 .5rem;
+}
+
 #Hobbies ul {
     max-width: 24rem;
     margin: 0 auto 2rem;
@@ -93,22 +103,6 @@ main {
     border-top: 3px solid #107382;
 }
 
-@media (min-width: 48rem) {
-    #gallery {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-    }
-
-    #gallery h2 {
-        grid-column: 1 / -1;
-    }
-
-    #gallery hr {
-        display: none;
-    }
-}
-
 /* Article */
 #lit {
     margin-bottom: 2rem;
@@ -126,4 +120,65 @@ main {
     font-size: 2.75em;
     font-weight: bold;
     line-height: 1;
+}
+
+/* Tablet: place captions beside the photos. */
+@media screen and (width >= 960px) {
+    #gallery figure {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        max-width: 60rem;
+        margin: 1.5rem auto;
+    }
+
+    #gallery figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        font-size: 2rem;
+    }
+
+    #lit div {
+        max-width: 100%;
+        columns: 40rem;
+        column-gap: 2rem;
+    }
+
+    #lit p {
+        margin-top: 0;
+    }
+}
+
+/* Large screens: place all three photos in one row. */
+@media screen and (width >= 1600px) {
+    main {
+        max-width: 90rem;
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    #gallery h2 {
+        grid-column: 1 / -1;
+    }
+
+    #gallery hr {
+        display: none;
+    }
+
+    #gallery figure {
+        display: block;
+        margin: 0;
+    }
+
+    #gallery figcaption {
+        display: block;
+        padding-top: .5rem;
+        font-size: 1.25rem;
+    }
 }
