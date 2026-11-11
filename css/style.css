@@ -103,6 +103,32 @@ main {
     border-top: 3px solid #107382;
 }
 
+/* Midterm video */
+#myVideo {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 3px solid #107382;
+    background-color: #102B82;
+    text-align: center;
+}
+
+#myVideo figure {
+    max-width: 45rem;
+    margin: 1rem auto;
+}
+
+#myVideo iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+#myVideo figcaption {
+    margin-top: .75rem;
+}
+
 /* Article */
 #lit {
     margin-bottom: 2rem;
